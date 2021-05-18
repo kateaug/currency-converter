@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './global';
+import { light, dark } from './themes';
+import { Header } from './components/Header/Header';
+import { Converter } from './components/ConverterCalculator/ConverterCalculator';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
+  const stored = localStorage.getItem('isDarkMode');
+  const [isDarkMode, setIsDarkMode] = useState(
+    stored === 'true' ? true : false
+  );
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem('isDarkMode', !isDarkMode);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <ThemeProvider theme={isDarkMode ? dark : light}>
+      <GlobalStyles />
+      <Header toggleThemes={toggleTheme} />
+      <Converter />
+      <Footer />
+    </ThemeProvider>
   );
 }
 
