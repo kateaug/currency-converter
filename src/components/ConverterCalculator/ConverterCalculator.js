@@ -138,23 +138,6 @@ export const Converter = () => {
 
             <Conversion>
                 <Button type='submit' disabled={!amount ? true : false}><strong>Convert</strong></Button>
-                {/* <Button type='submit'><strong>Convert</strong></Button> */}
-
-                        {/* {showResults ? (
-                         <>
-                          <Result>
-                            <ResultEquls>  
-                                <span>33,00</span>
-                                <span>PLN</span>
-                                <span>=</span>
-                            </ResultEquls>
-                            <ResultEquls>
-                                <span><strong>33,0000000</strong></span>
-                                <span><strong>Plnnn</strong></span>
-                            </ResultEquls>
-                        </Result> 
-                        </> ) : null} */}
-                    
                 
                     {showResults ? (
                         <>
@@ -170,8 +153,7 @@ export const Converter = () => {
                             </ResultEquls>
                         </Result>
                         </>
-                        ) : null   
-                    } 
+                    ) : null} 
             </Conversion>
         </>
 
