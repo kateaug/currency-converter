@@ -5,10 +5,14 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     color: ${({ theme }) => theme.text};
-    padding: 50px;
+    padding: 40px 10px 10px 10px;
+
+    @media (min-width: 600px) { 
+        padding: 50px;        
+    }
 
       h4 { 
-          font-size: 16px;
+          font-size: 14px;
           text-align: center;
 
           @media (min-width: 600px) { 

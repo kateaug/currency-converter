@@ -4,7 +4,6 @@ import { GlobalStyles } from './global';
 import { light, dark } from './themes';
 import { Header } from './components/Header/Header';
 import { Converter } from './components/ConverterCalculator/ConverterCalculator';
-import { Footer } from './components/Footer/Footer';
 
 function App() {
   const stored = localStorage.getItem('isDarkMode');
@@ -22,7 +21,6 @@ function App() {
       <GlobalStyles />
       <Header toggleThemes={toggleTheme} />
       <Converter />
-      <Footer />
     </ThemeProvider>
   );
 }

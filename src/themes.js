@@ -1,7 +1,10 @@
 // app colours 
 const white = '#ffffff';
+const gradient = 'linear-gradient(to top, #6dd5ed, #2193b0)';
 const lightBlue = '#5693c4';
 const blue = '#1f6feb';
+const darkBlue = '#0d419d';
+const midBlue = '#0c2d6b';
 const gray = '#484f58';
 const midGray = '#9c9c9c';
 const charcoal = '#0d1117';
@@ -12,11 +15,11 @@ const black = '#152028';
 export const light = {
   name: 'light',
   text: white,
-  background: '#2193b0', /* fallback for old browsers */
-  background: '-webkit-linear-gradient(to top, #6dd5ed, #2193b0)',  /* Chrome 10-25, Safari 5.1-6 */
-  background: 'linear-gradient(to top, #6dd5ed, #2193b0)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: gradient,
   elements: blue,
   hover: lightBlue,
+  btnFocus: darkBlue,
+  btnActive: midBlue,
   textElements: charcoal,
   selectElements: white,
   selectArrow: blue,
@@ -30,6 +33,8 @@ export const dark = {
   background: black,
   elements: blue,
   hover: lightBlue,
+  btnFocus: darkBlue,
+  btnActive: midBlue,
   textElements: white,
   selectElements: gray,
   selectArrow: white,

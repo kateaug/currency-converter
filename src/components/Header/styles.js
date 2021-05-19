@@ -11,7 +11,6 @@ export const Container = styled.header`
     }
 
 
-
     @media (min-width: 1200px) {
         padding: 20px 100px;
     }
@@ -35,7 +34,6 @@ export const Container = styled.header`
         cursor: pointer;
         margin-right: 0;  
         background: transparent;
-        
 
         span {
             display: none;
@@ -43,8 +41,7 @@ export const Container = styled.header`
                 display: block;
                 color: ${({ theme }) => theme.text};
             }
-   
-            
+          
         }
         svg {
             color: ${({ theme }) => theme.text};

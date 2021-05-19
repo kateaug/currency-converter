@@ -9,9 +9,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     html, body, #root {
-        height: 100vh;
-   
-    }
+        min-height: 100%
+     }
 
     html {
         background: ${({ theme }) => theme.background};
@@ -20,8 +19,6 @@ export const GlobalStyles = createGlobalStyle`
         width: 100%;
     }
 
-    #root {
-        position: relative;
-    }
+    
   
 `;

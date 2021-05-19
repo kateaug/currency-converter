@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.form`
-padding-bottom: 2.5rem;
     width: 80%;
     background-color: ${(theme) => theme.background};
     display: flex;
@@ -9,6 +8,8 @@ padding-bottom: 2.5rem;
     padding: 0 30px;
     margin: 0 auto;   
     justify-content: space-between;
+    flex: 1 0 auto;
+
 
         @media (min-width: 600px) { 
             border: 2px solid ${({ theme }) => theme.text};
@@ -52,24 +53,6 @@ export const Option = styled.div`
         }
 `;
 
-export const Conversion = styled.div`
-   display: flex;
-   flex-direction: column;
-   margin-top: 20px;
-   align-items: center;
-   justify-content: start;
-   //height: 100px;
-   padding: 20px 0;
-
-        @media (min-width: 600px) { 
-            flex-direction: row;
-            padding: 20px;
-            margin-top: 50px;
-
-
-        }
-`;
-
 export const Input = styled.input`
     /* Chrome, Safari, Edge, Opera */
     &::-webkit-outer-spin-button,
@@ -101,6 +84,24 @@ export const Input = styled.input`
      
 `;
 
+export const Conversion = styled.div`
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   align-items: center;
+   justify-content: start;
+   padding: 20px 0;
+   min-height:100%;
+
+        @media (min-width: 600px) { 
+            flex-direction: row;
+            padding: 20px;
+            margin-top: 50px;
+
+
+        }
+`;
+
 export const Button = styled.button`
     display: flex;
     justify-content: space-around;
@@ -118,10 +119,24 @@ export const Button = styled.button`
     transition: all 0.3s ease 0s;
     min-height: 100%;
     padding: 15px;
-    
-   
+    margin: 15px 0;
+        
+        &:visited {
+            background-color: ${({theme}) => theme.elements};
+        }
+
+        &:focus {
+            background-color:${({theme}) => theme.btnFocus};
+        }
+        
         &:hover {
             background-color:${({theme}) => theme.hover};
+            
+        }
+
+        &:active {
+            background-color:${({theme}) => theme.btnActive};
+            border: 2px solid ${({ theme }) => theme.elements};
             
         }
 
@@ -131,8 +146,7 @@ export const Button = styled.button`
         
         @media (min-width: 600px) { 
             width: 32%;
-           // font-size: 15px;
-           // padding: 15px;
+            margin: 35px 0;
         }
 
         @media (min-width: 1200px) { 
@@ -145,28 +159,38 @@ export const Button = styled.button`
 export const Result = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 30px 0;
   color: ${({ theme }) => theme.text};
+  
+  
 
   @media (min-width: 600px) { 
-    //flex-direction: row;
+    margin-left: 30px;
+    padding: 20px 0;
   }
 
 `;
 
 export const ResultEquls = styled.div`
   padding: 5px;
-  font-size: 20px;
+  font-size: 17px;
 
-  span {
-      padding: 5px;
-  }
+    @media (min-width: 375px) { 
+        font-size: 20px;
+    }
 
-  :nth-child(2) {
-      font-size: 25px;
 
-  }
+    span {
+        padding: 5px;
+    }
+
+    :nth-child(2) {
+        font-size: 20px;
+
+        @media (min-width: 375px) { 
+            font-size: 25px;
+        } 
+    }
 
 `;
